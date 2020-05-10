@@ -1,0 +1,13 @@
+/* Theme */
+$theme--color: #ff6633;
+
+$theme--light: #ffffff;
+$theme--dark: #242424;
+
+$active: #f90;
+
+:export {
+  themeColor: $theme--color;
+  themeLight: $theme--light;
+  themeDark: $theme--dark;
+}
