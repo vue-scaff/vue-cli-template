@@ -1,13 +1,20 @@
 /* Theme */
-$theme--color: #ff6633;
+$theme--color: #f63;
 
-$theme--light: #ffffff;
-$theme--dark: #242424;
+$theme--light: #fff;
+$theme--dark: #222;
+
+$bulletin-warm: #f7a;
+$bulletin-cold: #0af;
 
 $active: #f90;
 
 :export {
   themeColor: $theme--color;
+
   themeLight: $theme--light;
   themeDark: $theme--dark;
+
+	bulletinWarm: $bulletin-warm;
+	bulletinCold: $bulletin-cold;
 }

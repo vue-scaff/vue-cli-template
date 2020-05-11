@@ -7,7 +7,7 @@ const { name } = require("./package.json");
 // Globally Rem
 const cssPx2rem = require("postcss-plugin-px2rem");
 
-
+// Use Rem
 const px2rem = cssPx2rem({
   // remUnit: 32 //基准大小 baseSize，需要和rem.js中相同
 
@@ -39,7 +39,7 @@ const resolve = dir => path.join(__dirname, dir);
 // Exports
 module.exports = {
 	// publicPath is be set in `injection`
-  publicPath: process.env.publicPath,
+  publicPath: process.injection.publicPath,
   productionSourceMap: false,
   lintOnSave: true,
 	// Lan Access

@@ -9,19 +9,19 @@ export default ({ $http }) => {
   };
 
   const mutations = {
-    rename(state, option) {
+    MUTATE_RENAME(state, option) {
       state.name = option;
     }
   };
 
   const actions = {
-    chance({ commit, state }, message) {
-      commit("rename", message);
+    ACTION_CHANCE({ commit, state }, message) {
+      commit("MUTATE_RENAME", message);
     },
-    chanceAsync: async function({ commit, state }, message) {
+    async ACTION_CHANCE_SYNC({ commit, state }, message) {
       return await new Promise(resolve => {
-        commit("rename", message);
-        resolve("emmm...");
+        commit("MUTATE_RENAME", message);
+        resolve("Dispatch Sync 1");
       });
     }
   };

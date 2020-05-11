@@ -16,6 +16,7 @@
     position: fixed;
     top: 0.5rem;
     right: 0.5rem;
+		z-index: 1;
   }
 }
 </style>
@@ -24,26 +25,28 @@
   <div
     id="app"
     class="theme"
-    :style="{ backgroundColor: $style[`theme${skin[theme]}`] }"
+    :style="{ backgroundColor: $style[`theme${skin[global.theme]}`] }"
   >
     <div class="theme-switch" @click="themeSwitch">
-      {{ theme ? "☀️" : "🌙" }}
+      {{ global.theme ? "☀️" : "🌙" }}
     </div>
-    <router-view />
+    <router-view class="page" />
   </div>
 </template>
 
 <script>
+import mixin from '@/registry/mixin';
+
 export default {
+  mixins: [mixin],
   data() {
     return {
-      theme: 1,
       skin: ["Dark", "Light"]
     };
   },
   methods: {
     themeSwitch() {
-      this.theme = !this.theme - 0;
+      this.global.theme = !this.global.theme - 0;
     }
   }
 };

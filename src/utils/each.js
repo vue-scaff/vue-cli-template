@@ -1,2 +1,3 @@
-export default (data, callback) =>
-  Object.keys(data).map(key => callback(data[key], key));
+export default (data, callback) => {
+  return Object.keys(data).map(key => callback(data[key], key));
+};

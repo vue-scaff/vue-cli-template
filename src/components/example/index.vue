@@ -1,19 +1,23 @@
+<style lang="scss" scoped>
+.example {
+  h1 {
+    font-size: 36px;
+		line-height: 48px;
+  }
+}
+</style>
+
 <template>
-  <div class="x-sample">
-    <div>
-      <img src="@/assets/logo.png" />
-    </div>
-    <div>
-      <span :style="{ color }">
-        {{ message }}
-      </span>
-    </div>
+  <div class="example">
+    <h1 :style="{ color }">
+      {{ message }}
+    </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "sample",
+  name: "example",
   props: {
     message: {
       type: String,
