@@ -23,7 +23,7 @@
     color: $theme--dark;
 
     .bulletin {
-			border-bottom: 1px solod transparent;
+      border-bottom: 1px solid transparent;
       box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.25);
 
       h1 {

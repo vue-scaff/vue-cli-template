@@ -6,7 +6,7 @@ export default $http => {
       width: 375,
       height: 667
     },
-		theme: 1
+    theme: 1
   };
   const mutations = {};
   const actions = {};

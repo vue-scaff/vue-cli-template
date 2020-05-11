@@ -2,7 +2,7 @@
 .example {
   h1 {
     font-size: 36px;
-		line-height: 48px;
+    line-height: 48px;
   }
 }
 </style>

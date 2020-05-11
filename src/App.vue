@@ -16,7 +16,7 @@
     position: fixed;
     top: 0.5rem;
     right: 0.5rem;
-		z-index: 1;
+    z-index: 1;
   }
 }
 </style>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import mixin from '@/registry/mixin';
+import mixin from "@/registry/mixin";
 
 export default {
   mixins: [mixin],
