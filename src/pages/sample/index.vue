@@ -15,7 +15,7 @@
           $bulletin-warm,
           $bulletin-warm
         );
-        -webkit-animation: hue 12s infinite alternate linear;
+        -webkit-animation: hue-warm 12s infinite alternate linear;
       }
     }
   }
@@ -32,7 +32,7 @@
           $bulletin-warm,
           $bulletin-warm
         );
-        -webkit-animation: hue 12s infinite alternate linear;
+        -webkit-animation: hue-warm 12s infinite alternate linear;
       }
     }
   }

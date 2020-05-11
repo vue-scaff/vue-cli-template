@@ -9,18 +9,18 @@
 
 @keyframes hue-warm {
   from {
-    -webkit-filter: hue-rotate(-90deg);
+    -webkit-filter: hue-rotate(-45deg);
   }
   to {
-    -webkit-filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(135deg);
   }
 }
 
 @keyframes hue-cold {
   from {
-    -webkit-filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(135deg);
   }
   to {
-    -webkit-filter: hue-rotate(270deg);
+    -webkit-filter: hue-rotate(315deg);
   }
 }

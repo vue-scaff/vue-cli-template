@@ -4,7 +4,7 @@ export default ({ $http }) => {
   const name = "home";
 
   const state = {
-    name: "joenix",
+    name: "Vue Scaff",
     nick: "Social Cat"
   };
 
