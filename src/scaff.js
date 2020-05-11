@@ -10,54 +10,48 @@ import { vueInterceptor, vuePreset, vueProce } from "./engineer";
 // Import Sheet
 import "@/sheet/index.scss";
 
-// Use Diff
-import { baseRoute } from "@/diff";
-
 // Export Useage
-export default (App, Extension = () => {}) =>
-  // Running
-  new Scaff({})
-    .then(
-      (
-        // Provider
-        { subscript },
-        // Next
-        Next
-      ) => {
-        subscript("util", config => {
-          console.log("::: util in scaff :::", config);
-        });
+export default App =>
+  // Instantiation
+  new Scaff({
+    /* Some Configure */
+  }).then(
+    (
+      // Subscript Face
+      { subscript },
+      // Runner
+      next
+    ) => {
+      subscript("util", config => {
+        console.log("UTIL MODULE : ", config);
+      });
 
-        subscript("route", config => {
-          console.log("::: route in scaff :::", config);
-          config.mode = "history";
-        });
+      subscript("route", config => {
+        console.log("ROUTE CONFIGURE : ", config);
 
-        subscript("component", (config, model) => {
-          config.prefix = "x";
-        });
+        config.mode = "history";
+        config.baseRoute = process.env.publicPath;
+      });
 
-        subscript("request", ({ data, headers }) => {
-          // console.log("=====request=====", config);
-          data.z = 2;
-          console.log(222224, data);
-        });
+      subscript("component", (config, model) => {
+        config.prefix = "x";
+      });
 
-        subscript("response", config => {
-          console.log("=====response=====", config);
-        });
+      subscript("request", ({ data, headers }) => {
+        data.token = "wechat: kazami500";
+      });
 
-        subscript("mock", config => {
-          // console.log(9899, aaa, bbb);
-          return {
-            name: "joe"
-          };
-        });
+      subscript("response", config => {
+        console.log("HTTP Response : ", config);
+      });
 
-        // Runner
-        return Next(App);
-      }
-    )
-    .finally(v => {
-      console.log(999, v);
-    });
+      subscript("custom", config => {
+        return {
+          author: "joenix"
+        };
+      });
+
+      // Runner
+      return next(App);
+    }
+  );
