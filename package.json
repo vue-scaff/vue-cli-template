@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "@scaff/vue-cli-scaff": "^5.1.5",
+    "animate.css": "^4.1.0",
     "core-js": "^3.3.2",
     "normalize.css": "^8.0.1",
-    "style.reset": "^1.0.0",
     "register-service-worker": "^1.6.2",
+    "style.reset": "^1.0.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {

@@ -12,6 +12,7 @@
     <h1 :style="{ color }">
       {{ message }}
     </h1>
+    <slot />
   </div>
 </template>
 

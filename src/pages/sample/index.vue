@@ -6,9 +6,6 @@
     color: $theme--light;
 
     .bulletin {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      background-color: rgba(0, 0, 0, 0.2);
-
       h1 {
         background-image: linear-gradient(
           180deg,
@@ -17,15 +14,16 @@
         );
         -webkit-animation: hue-warm 12s infinite alternate linear;
       }
+
+      span {
+        box-shadow: 0 -0.125rem 0.375rem rgba(255, 255, 255, 0.375);
+      }
     }
   }
   &-light {
     color: $theme--dark;
 
     .bulletin {
-      border-bottom: 1px solid transparent;
-      box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.25);
-
       h1 {
         background-image: linear-gradient(
           180deg,
@@ -33,6 +31,10 @@
           $bulletin-warm
         );
         -webkit-animation: hue-warm 12s infinite alternate linear;
+      }
+
+      span {
+        box-shadow: 0 -0.125rem 0.375rem rgba(0, 0, 0, 0.375);
       }
     }
   }
@@ -41,7 +43,9 @@
 
 <template>
   <div class="sample" :class="`sample-${['dark', 'light'][global.theme]}`">
-    <x-example class="bulletin" :message="home.name" :color="$style.theme" />
+    <x-example class="bulletin" :message="home.name" :color="$style.theme">
+      <span />
+    </x-example>
     <ul class="panel">
       <li>
         <button type="default" @click="doState()">
