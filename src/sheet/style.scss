@@ -5,8 +5,9 @@
   .logo {
     height: 128px;
     width: 128px;
+    outline: none;
 
-    &:hover {
+    &.effect {
       animation: jello;
       animation-duration: 1s;
     }

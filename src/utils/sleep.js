@@ -1,3 +1,12 @@
+// Clean Out
+function clean(out) {
+  // Clean Timeout
+  clearTimeout(out);
+
+  // Reset Out
+  out = undefined;
+}
+
 export default time => {
   // Set Out for Clean Up
   let out;
@@ -8,7 +17,7 @@ export default time => {
     out = setTimeout(
       () => {
         // Clean Up
-        clearTimeout(out);
+        clean(out);
 
         // Execute
         resolve();

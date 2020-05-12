@@ -2,7 +2,12 @@
   <div class="home">
     <!-- Jumbotron -->
     <div class="jumbotron">
-      <img class="logo animted" src="@/assets/logo.png" />
+      <img
+        class="logo animted"
+        :class="{ effect }"
+        src="@/assets/logo.png"
+        @click="camera"
+      />
       <div class="slogan">
         <h1>{{ $t("hello") }} Vue Scaff</h1>
         <span>= Next Engineering Scaffold =</span>
@@ -22,12 +27,26 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
   mixins: [registry.mixin],
-  components: {},
-  methods: {},
+  data() {
+    return {
+      effect: false
+    };
+  },
+  methods: {
+    camera() {
+      // in Effect
+      if (this.effect) {
+        return;
+      }
+
+      // run Effect
+      this.effect = true;
+
+      // clean Effect
+      this.$util.sleep(1000).then(() => (this.effect = false));
+    }
+  },
   mounted() {}
 };
 </script>
