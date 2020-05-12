@@ -10,13 +10,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@scaff/vue-cli-scaff": "^5.1.5",
-    "animate.css": "^4.1.0",
+    "@scaff/vue-cli-scaff": "^5.1.8",
     "core-js": "^3.3.2",
-    "normalize.css": "^8.0.1",
     "register-service-worker": "^1.6.2",
-    "style.reset": "^1.0.0",
-    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
