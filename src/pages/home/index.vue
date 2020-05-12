@@ -2,7 +2,7 @@
   <div class="home">
     <!-- Jumbotron -->
     <div class="jumbotron">
-      <img class="logo" src="@/assets/logo.png" />
+      <img class="logo animted" src="@/assets/logo.png" />
       <div class="slogan">
         <h1>{{ $t("hello") }} Vue Scaff</h1>
         <span>= Next Engineering Scaffold =</span>

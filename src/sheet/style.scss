@@ -5,6 +5,11 @@
   .logo {
     height: 128px;
     width: 128px;
+
+    &:hover {
+      animation: jello;
+      animation-duration: 1s;
+    }
   }
 
   .slogan {
