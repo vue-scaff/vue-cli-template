@@ -24,7 +24,7 @@ export default (
   });
 
   subscribe("store", (config, model) => {
-    console.log("STORE !!! : ", config);
+    console.log("STORE CONFIGURE : ", model, config);
   });
 
   subscribe("component", (config, model) => {
