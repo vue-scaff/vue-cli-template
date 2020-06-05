@@ -23,6 +23,10 @@ export default (
     config.baseRoute = process.env.publicPath;
   });
 
+  subscribe("store", (config, model) => {
+    console.log("STORE !!! : ", config);
+  });
+
   subscribe("component", (config, model) => {
     config.prefix = "x";
   });
