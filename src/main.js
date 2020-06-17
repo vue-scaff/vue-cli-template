@@ -24,11 +24,18 @@ export default (
   });
 
   subscribe("store", (config, model) => {
-    console.log("STORE CONFIGURE : ", model, config);
+    config.getters = {
+      sidebar: state => state.app.sidebar
+    };
+    console.log("STORE CONFIGURE : ", config);
   });
 
   subscribe("component", (config, model) => {
     config.prefix = "x";
+  });
+
+  subscribe("filter", (config, model) => {
+    console.log("FILTER MODULES", config, model);
   });
 
   subscribe("request", ({ data, headers }) => {
