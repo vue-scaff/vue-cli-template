@@ -35,7 +35,7 @@ export default (
   });
 
   subscribe("filter", (config, model) => {
-    console.log("FILTER MODULES", config, model);
+    model.combination = value => `${value} Vue Scaff 123`;
   });
 
   subscribe("request", ({ data, headers }) => {
